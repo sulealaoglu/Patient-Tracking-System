@@ -1,0 +1,33 @@
+﻿@model UpdateAppointmentViewModel
+@{
+}
+
+<h1>Edit Appointment</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">AppointmentID</label>
+        <input type="text" class="form-control" asp-for="AppointmentID" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">PatientID</label>
+        <input type="text" class="form-control" asp-for="PatientID">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">DoctorID</label>
+        <input type="text" class="form-control" asp-for="DoctorID">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">AppointmentDate</label>
+        <input type="date" class="form-control" asp-for="AppointmentDate">
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">AppointmentTime</label>
+        <input type="time" class="form-control" asp-for="AppointmentTime">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-danger"asp-action="Delete"asp-controller="Appointment">Delete</button>
+</form>

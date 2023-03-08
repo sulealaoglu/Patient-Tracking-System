@@ -1,0 +1,30 @@
+﻿@model List<Appointment>
+@{
+}
+
+<h1>Appointments</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Patient ID</th>
+            <th>Doctor ID</th>
+            <th>Appointment Date</th>
+            <th>Appointment Time</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var appointment in Model)
+        {
+            <tr>
+                <td>@appointment.AppointmentID</td>
+                <td>@appointment.PatientID</td>
+                <td>@appointment.DoctorID</td>
+                <td>@appointment.AppointmentDate.ToString("dd-MM-yyyy")</td>
+                <td>@appointment.AppointmentTime.ToString("hh:mm")</td>
+                <td><a href="Appointment/View/@appointment.AppointmentID">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

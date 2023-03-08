@@ -1,0 +1,43 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    
+    
+    @model List<Patient>
+
+}
+<h2 style="color:seagreen; text-align: center;"> All Patients </h2>
+<br></br>
+
+<table class=" table table-dark">
+    <thead>
+        <tr>
+            <th style="color:seagreen;" scope="col">Id</th>
+            <th style="color:aliceblue" style=scope ="col">Name</th>
+            <th style="color:seagreen;" scope="col">Surname</th>
+            <th "color:aliceblue" scope="col">Birth Date</th>
+            <th style="color:seagreen;" scope="col">Treatment</th>
+            <th style="color:aliceblue" style=scope ="col">Doctor</th>
+
+
+        </tr>
+    </thead></thead>
+    <tbody>
+            @foreach (var p in Model)
+            {
+            <tr>
+                <th scope="col">@p.id</th>
+                <th scope="col">@p.name</th>
+                <th scope="col">@p.surname</th>
+                <th scope="col">@p.bdate</th>
+                <th scope="col">@p.treatment</th>
+                <th scope="col">@p.dr.name</th>
+            </tr>
+            }
+
+        
+    <tbody>
+    </tbody>
+</table>
+
